@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="我的第一篇文章">
+<meta name="description" content="#JS函数   ####简介函数也是一个对象。函数中可以封装一些代码，在需要时可以执行这些代码。函数中可以保存一些代码在需要的时候调用。使用typeof检查函数对象，会返回function    ####创建函数创建一个函数，可以将要封装的代码以字符串的形式传递给构造函数  封装到函数中的代码不会立即执行调用函数语法，函数对象()当调用函数时，函数中封装的代码会按照顺序执行    使用函数声明来创">
 <meta property="og:type" content="article">
-<meta property="og:title" content="你好，Hexo">
-<meta property="og:url" content="http://yoursite.com/2019/07/08/你好，Hexo/index.html">
+<meta property="og:title" content="灰">
+<meta property="og:url" content="http://yoursite.com/2019/10/15/js函数/index.html">
 <meta property="og:site_name" content="灰">
-<meta property="og:description" content="我的第一篇文章">
+<meta property="og:description" content="#JS函数   ####简介函数也是一个对象。函数中可以封装一些代码，在需要时可以执行这些代码。函数中可以保存一些代码在需要的时候调用。使用typeof检查函数对象，会返回function    ####创建函数创建一个函数，可以将要封装的代码以字符串的形式传递给构造函数  封装到函数中的代码不会立即执行调用函数语法，函数对象()当调用函数时，函数中封装的代码会按照顺序执行    使用函数声明来创">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-08T03:50:05.637Z">
+<meta property="og:updated_time" content="2019-10-14T09:28:20.398Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="你好，Hexo">
-<meta name="twitter:description" content="我的第一篇文章">
+<meta name="twitter:title" content="灰">
+<meta name="twitter:description" content="#JS函数   ####简介函数也是一个对象。函数中可以封装一些代码，在需要时可以执行这些代码。函数中可以保存一些代码在需要的时候调用。使用typeof检查函数对象，会返回function    ####创建函数创建一个函数，可以将要封装的代码以字符串的形式传递给构造函数  封装到函数中的代码不会立即执行调用函数语法，函数对象()当调用函数时，函数中封装的代码会按照顺序执行    使用函数声明来创">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/07/08/你好，Hexo/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/15/js函数/">
 
 
 
 
 
-  <title>你好，Hexo | 灰</title>
+  <title> | 灰</title>
   
 
 
@@ -314,7 +314,7 @@
     
 	
 	
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/08/你好，Hexo/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/15/js函数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="灰">
@@ -331,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">你好，Hexo</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -343,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-08T11:49:07+08:00">
-                2019-07-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-15T08:59:31+08:00">
+                2019-10-15
               </time>
             
 
@@ -380,7 +380,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  7字
+                  1.1k字
                 </span>
               
 
@@ -396,7 +396,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1分钟
+                  3分钟
                 </span>
               
             </div>
@@ -417,7 +417,69 @@
       
 
       
-        <p>我的第一篇文章</p>
+        <p>#JS函数  </p>
+<p>####简介<br>函数也是一个对象。<br>函数中可以封装一些代码，在需要时可以执行这些代码。<br>函数中可以保存一些代码在需要的时候调用。<br>使用typeof检查函数对象，会返回function   </p>
+<p>####创建函数<br>创建一个函数，可以将要封装的代码以字符串的形式传递给构造函数</p>
+<blockquote>
+<p>封装到函数中的代码不会立即执行<br>调用函数语法，函数对象()<br>当调用函数时，函数中封装的代码会按照顺序执行  </p>
+</blockquote>
+<p><strong>使用函数声明来创建一个函数</strong><br>会被提前创建，所以什么时候调用都行。</p>
+<pre>
+    function 函数名([形参...]){
+        语句...    
+    }
+</pre>
+<p><strong>使用函数表达式来创建一个函数</strong><br>创建匿名函数，再赋值给变量。不会被提前创建。 </p>
+<pre>
+    var 函数名=function([形参...]){
+        语句...    
+    }
+</pre>
+
+<p>####函数的参数<br>可以在函数的()中来指定一个或多个形参（形式参数）<br>多个形参之间使用，隔开，声明形参就相当于在函数内部声明了对于的变量，但不会赋值。  </p>
+<blockquote>
+<p>在函数调用时，可以在()中指定实参（实际参数）实参将会赋值给函数中对应的形参。<br>调用函数时，解析器不会检查实参的类型，所以要注意，是否有可能会接受到非法的参数，如果有可能则需要对参数进行类型的检查。<br>调用参数时，解析器也不会检查实参的数量  </p>
+<blockquote>
+<p>多余实参不会被赋值，如果实参的数量少于形参的数量，则没有对应实参的形参将会是undefined   </p>
+</blockquote>
+</blockquote>
+<p>####函数的返回值<br>使用return来设置函数的返回值。<br>语法:<code>return 返回值</code><br>return后的值会作为函数的执行结果返回，可以定义一个变量，接受该结果。<br>在函数中，return后的语句都不会执行。  </p>
+<blockquote>
+<p>如果return语句后不跟任何值就相当于返回一个undefined，<br>如果函数中不写return，则也会返回undefined</p>
+</blockquote>
+<p>return后可以返回任意值。</p>
+<p>####函数的实参<br>实参可以是任何的数据类型，也可以是一个对象。<br>当我们的参数过多时，可以将参数封装到一个对象中，然后通过对象传递。   </p>
+<p>实参也可以是一个函数 </p>
+<p>####立即执行函数<br>函数定义完，立即被调用，这种函数叫做立即执行函数。<br>这种函数往往只会执行一次。<br>例子：</p>
+<pre>
+    (function(){
+        alert("这是一个立即执行函数~~~");
+    })();
+</pre>
+
+<p>####方法<br>函数也可以称为对象的属性  </p>
+<blockquote>
+<p>如果一个函数作为一个对象的属性保存。<br>那么我们称这个函数是这个对象的方法。<br>调用这个函数就是调用对象的方法。</p>
+</blockquote>
+<p><strong>只是名称上的区别没有其他区别</strong>  </p>
+<p>####全局作用域<br>作用域指一个变量的作用的范围。<br>在JS中一共有两种作用域：<br>全局作用域</p>
+<blockquote>
+<p>直接编写在script标签中的JS代码中，都在全局作用域<br>全局作用域在页面打开时创建，在页面关闭时销毁。<br>在全局作用域中有一个全局对象window，代表的是我们浏览器的窗口，由浏览器创建，我们可以直接使用。  </p>
+<blockquote>
+<p>在全局作用域中，创建的变量都会作为window对象的属性保存。<br>创建的函数都会作为window的方法保存  </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>全局作用域中的变量都是全局变量（在页面的任意的部分都可以被访问到）  </p>
+</blockquote>
+<p>####函数作用域</p>
+<ul>
+<li>调用函数时，创建函数作用域，执行完成后，函数作用域销毁。  </li>
+<li>每调用一次函数就会创建一个新的函数作用域，他们之间是相互独立的。  </li>
+<li>在函数作用域中可以访问到全局作用域的变量(在全局作用域不能访问函数作用域的)   </li>
+<li>当函数作用域操作一个变量时，它会先在自身作用域中寻找，如果有就直接使用，如果没有则向上一级作用域中寻找，直到找到全局作用域，如果全局作用域中依然没有找到，则会报错ReferenceError  </li>
+</ul>
+<p><strong>在函数中，如果不使用var关键字声明变量，会变成全局变量  形参相当于定义了变量</strong>  </p>
 
       
     </div>
@@ -442,8 +504,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/08/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/10/15/js运算/" rel="next" title>
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -451,10 +513,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/12/12/适配器模式/" rel="prev" title="适配器模式">
-                适配器模式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -530,7 +588,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -538,15 +596,6 @@
 
             
 
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
             
 
           </nav>
@@ -610,7 +659,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

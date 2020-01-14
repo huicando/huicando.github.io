@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="我的第一篇文章">
+<meta name="description" content="###Linux 下安装MySql   #####安装：  rpm -ivh rpm 软件名如果安装时与某个软件 XXX冲突，则需要将冲突的软件卸载掉：  yun -y -remove xxx          安装时 有日志会提示我们可以修改密码：输入    ‘new-password’        注意：如果提示“GPG keys…”安装失败，解决办法：   rpm -ivh rpm 软件名">
 <meta property="og:type" content="article">
-<meta property="og:title" content="你好，Hexo">
-<meta property="og:url" content="http://yoursite.com/2019/07/08/你好，Hexo/index.html">
+<meta property="og:title" content="MySQL高级">
+<meta property="og:url" content="http://yoursite.com/2019/07/08/Mysql高级/index.html">
 <meta property="og:site_name" content="灰">
-<meta property="og:description" content="我的第一篇文章">
+<meta property="og:description" content="###Linux 下安装MySql   #####安装：  rpm -ivh rpm 软件名如果安装时与某个软件 XXX冲突，则需要将冲突的软件卸载掉：  yun -y -remove xxx          安装时 有日志会提示我们可以修改密码：输入    ‘new-password’        注意：如果提示“GPG keys…”安装失败，解决办法：   rpm -ivh rpm 软件名">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-08T03:50:05.637Z">
+<meta property="og:updated_time" content="2019-10-15T01:01:56.481Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="你好，Hexo">
-<meta name="twitter:description" content="我的第一篇文章">
+<meta name="twitter:title" content="MySQL高级">
+<meta name="twitter:description" content="###Linux 下安装MySql   #####安装：  rpm -ivh rpm 软件名如果安装时与某个软件 XXX冲突，则需要将冲突的软件卸载掉：  yun -y -remove xxx          安装时 有日志会提示我们可以修改密码：输入    ‘new-password’        注意：如果提示“GPG keys…”安装失败，解决办法：   rpm -ivh rpm 软件名">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/07/08/你好，Hexo/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/08/Mysql高级/">
 
 
 
 
 
-  <title>你好，Hexo | 灰</title>
+  <title>MySQL高级 | 灰</title>
   
 
 
@@ -314,7 +314,7 @@
     
 	
 	
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/08/你好，Hexo/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/08/Mysql高级/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="灰">
@@ -331,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">你好，Hexo</h1>
+          <h1 class="post-title" itemprop="name headline">MySQL高级</h1>
         
 
         <div class="post-meta">
@@ -380,7 +380,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  7字
+                  3.8k字
                 </span>
               
 
@@ -396,7 +396,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1分钟
+                  14分钟
                 </span>
               
             </div>
@@ -417,7 +417,382 @@
       
 
       
-        <p>我的第一篇文章</p>
+        <p>###Linux 下安装MySql  </p>
+<p>#####安装：</p>
+<blockquote>
+<p>rpm -ivh rpm 软件名<br>如果安装时与某个软件 XXX冲突，则需要将冲突的软件卸载掉：</p>
+<blockquote>
+<p>yun -y -remove xxx      </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>安装时 有日志会提示我们可以修改密码：输入  </p>
+<blockquote>
+<p>‘new-password’    </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>注意：如果提示“GPG keys…”安装失败，解决办法： </p>
+<blockquote>
+<p>rpm -ivh rpm 软件名 –force –nodoeps  </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>验证：</p>
+<blockquote>
+<p>mysqladmin –version</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>启动： </p>
+<blockquote>
+<p>service mysql strat  </p>
+</blockquote>
+<p>关闭：</p>
+<blockquote>
+<p>service mysql stop</p>
+</blockquote>
+<p>重启：  </p>
+<blockquote>
+<p>service mysql restart</p>
+</blockquote>
+</blockquote>
+<hr>
+<p>#####登陆：<br>登陆mysql（需要MySQL已经启动。）:<code>mysql</code>   </p>
+<blockquote>
+<p>MySQL 未启动的解决办法。<br>1.手动启动。<code>service mysql strat</code><br>2.设置开启自动启动：<code>chkconfig mysql on/off</code> 检查是否开机自启：<code>ntsysv</code></p>
+</blockquote>
+<p>给root添加密码：<code>/user/bin/mysqladmin -u root password root</code><br>登陆：<code>mysql -u -root -p</code><br>MySQL字符编码: <code>show variables like &#39;char&#39;;</code>  需要统一修改为utf-8<br>需要设置编码：</p>
+<blockquote>
+<p>vi /etc/my.cnf:<br>[mysql]</p>
+<blockquote>
+<p><code>default-character-set=utf8</code></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>[client]</p>
+<blockquote>
+<p><code>default-character-set=uft8</code></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>[mysqld]</p>
+<blockquote>
+<p><code>character_set_server=utf8</code><br><code>character_set_client=uft8</code><br><code>collation_server=utf8_general_ci</code></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>重启后生效。<br><strong>注意：修改编码只对之后创建数据库生效，建议在安装完MySQL之后，第一时间设置</strong></p>
+</blockquote>
+<hr>
+<p>#####原理：<br>Mysql分层：  </p>
+<blockquote>
+<p>1.连接层：提供与客户端连接的服务<br>2.服务层：使用各个用户使用的接口；提供SQL优化器（MySQL QUery Optimizer）<br>3.引擎层：提供了各种存储数据的方式（<code>InnoDB</code>(事务优先：适合高并发操作；行锁)  ;<code>MyISAM</code>(性能优先：表锁)）<br>4.存储层：存储数据</p>
+</blockquote>
+<p>查看数据库引擎：<br>支持哪些引擎：<code>show engines;</code><br>查看当前引擎：<code>show variables like &#39;%storage_engine%&#39;;</code><br>指定数据库对象的引擎:  </p>
+<pre>
+create table tb(
+    id int(4) auto_increment,
+    name varchar(5),
+    dept varchar(5),
+    primary key(id)
+)ENGINE=MyISAM AUTO_INCREMENT=1
+DEFAULT CHARSET=utf8;
+</pre>
+<hr>
+<p>#####SQL优化：<br>原因：</p>
+<blockquote>
+<p>性能低，执行时间太长，SQL语句欠佳（连接查询），索引失效，服务器参数设置不合理（缓冲，线程数）  </p>
+</blockquote>
+<p>1.sql语句的编写和解析<br>2.SQL优化，主要是 在优化索引。  </p>
+<blockquote>
+<p>索引：相当于书的目录。<br>索引：index是帮助MySQL高效获取数据的数据结构（树，hash结构）。<br>索引的弊端：</p>
+<blockquote>
+<p>1.本身很大，可以存放在内存/硬盘。<br>2.不是所有情况均可适用: a.少量数据  b.频繁更新的字段 c.很少使用的字段<br>3.索引会降低增删改的效率。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>索引的优势：</p>
+<blockquote>
+<p>1.提高查询的效率(降低IO使用效率)。<br>2.降低cpu的使用</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>索引的分类：</p>
+<blockquote>
+<p>单值索引：单列，一个表可以多个单值索引。<br>唯一索引：单列，不能重复，一般是主键<br>复合索引：多列构成的索引。（相当于二级目录） </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>创建索引：</p>
+<blockquote>
+<p>方法一：create 索引类型 索引名 on 表（字段）<br>单值：<code>create index dept_index on tb(dept);</code><br>唯一：<code>create unique index name_index on tb(name);</code><br>复合：<code>create index dept_name_index on tb(dept,name);</code><br>方法二：alter table 表名 索引类型 索引名（字段）<br>单值：<code>alter table tb add index dept_index(dept);</code><br>唯一:<code>alter table tb add unique index name_index(name);</code><br>复合：<code>alter table tb add index dept_name_index(dept,name);</code><br><strong>注意：如果一个字段是主键，则该字段默认就是 主键索引</strong>  </p>
+</blockquote>
+<p>删除索引：drop index 索引名 on 表名;</p>
+<blockquote>
+<p><code>drop index name_index on tb;</code>  </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>查询索引：show index from 表名；</p>
+<blockquote>
+<p><code>show index from tb;</code> </p>
+</blockquote>
+</blockquote>
+<p>SQL性能问题：<br>1.分析SQL的执行计划。explain，可以模拟SQL优化器执行SQL语句，从而让开发人员编写执行语句。<br>2.MySQL查询优化器会干扰我们的优化。<br>查询执行计划：explain+SQL语句  </p>
+<blockquote>
+<p><code>explain select * from tb;</code></p>
+</blockquote>
+<hr>
+<p>#####explain中的列解析：<br>(1)id：</p>
+<blockquote>
+<p>id值相同，从上到下；id值不相同，越大越优先</p>
+</blockquote>
+<p>(2)select_type:（查询类型）</p>
+<blockquote>
+<p>PRIMARY:包含子查询sql的主查询（最外层）<br>SUBQUERY:包含子查询sql中的子查询（非最外层）<br>simple：简单查询（不包含子查询，union）<br>derived：衍生查询（使用到临时表）</p>
+<blockquote>
+<p>1.在from子查询中只有一张表<br>2.在from子查询中，如果有table1 union table2，则table1 就是 derived，table2 就是union</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>union:连接<br>union result：告知开发人员，哪些表存在union查询。  </p>
+</blockquote>
+<p>(3)type:索引类型，类型<br>system&gt;const&gt;eq_ref&gt;ref&gt;range&gt;index&gt;all</p>
+<blockquote>
+<p>越左边性能越高(要对type进行优化的前提：有索引)<br>其中system,const只是理想情况，实际能达到ref&gt;range<br>system:只用一条数据的系统表，或者衍生表只用一条数据的主查询<br>const：仅仅能查到一条数据的SQL,用于Primary key或unique索引（类型与索引类型有关）<br>eq_ref:唯一性索引：对于每个索引键的查询，返回匹配唯一行数据（有且只有1个，不能多，不能0）（查询结果行数与表数据相同且要一一对应）<br>ref:非唯一性索引，对于每个索引键的查询，返回匹配的所有行（0对多）<br>range：检索指定范围的行，where后面是一个范围查询（betwee，&gt;，&lt;，in(有时候会失效，转化为all)）<br>index：查询全部索引中的数据。<br>all:查询全部表中的数据。 </p>
+</blockquote>
+<p>(4)possible_keys:可能用到的索引(预测)。<br>(5)key:实际使用到的索引。 </p>
+<blockquote>
+<p>如果possible_keys,keys都为null,则说明没有索引。  </p>
+</blockquote>
+<p>(6)key_len:索引的长度；<br>作用：用于判断复合索引是否被完全使用  </p>
+<blockquote>
+<p>如果索引可以为nll,则会用一个字节用于标识。</p>
+</blockquote>
+<p>(7)ref:注意与type中的ref区分。<br>指明当前表所参照的字段。<br>(8)rows:<br>被索引优化查询的 数据个数（实际通过索引而查询到的数据个数）<br>(9)Extra:(额外的)</p>
+<blockquote>
+<p>using filesort:性能消耗大，需要”额外”的一次排序（常出现在order by）</p>
+<blockquote>
+<p>对于单索引，如果排序和查找的是同一个字段，则不会出现，如果不是相同的就会出现<br>复合索引:如果跨列排序使用就会出现，where 和order by 按照复合索引的顺序使用，不要跨列或无序使用。  </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>using temporary:性能损耗大，用到了临时表。(一般出现在group by)</p>
+<blockquote>
+<p>避免：查询那些列，就根据那些列group by</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>using index:性能提升，索引覆盖。</p>
+<blockquote>
+<p>原因：不读取原文件，只从索引中获取数值。只要使用到的列全部都在索引中，就是索引覆盖using index。<br>如果用到了索引覆盖（using index），会对possible_keys 和key造成影响:</p>
+<blockquote>
+<p>如果没有where，则索引只出现在key中<br>如果有where，则索引出在key和possible_keys中。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>using where(需要回表查询)</p>
+</blockquote>
+<hr>
+<p>####优化示例</p>
+<p>#####单表优化：<br>加索引：</p>
+<blockquote>
+<p>最佳左前缀，保持索引的定义和使用的顺序的一致性。<br>索引需要逐步优化。<br>将含IN的范围查询放到where的最后面，防止失效。    </p>
+</blockquote>
+<p>#####两表优化：<br>加索引：</p>
+<blockquote>
+<p>小表驱动大表。<br>索引建立在常用的表的字段上。(左连接建立在左表上)(右连接建立在右表上)   </p>
+</blockquote>
+<p>#####多表优化：</p>
+<blockquote>
+<p>与双表优化基本相同。<br>小表驱动大表<br>索引建立在经常查询的字段上  </p>
+</blockquote>
+<hr>
+<p>####避免索引失效的一些原则：<br>(1)复合索引：</p>
+<blockquote>
+<p>不用跨列或者无序使用(最佳左前缀)<br>尽量使用全索引匹配，把该有的都用上  </p>
+</blockquote>
+<p>(2)不要再索引上进行任何操作（计算、函数、类型转换),否则索引失效。<br>(3)不能使用不等于(!= ,&lt;&gt;)或 is null(is not null),否则自身以及右侧所有全部失效。</p>
+<blockquote>
+<p>一般而言(&gt; &lt; in)范围查询，之后的索引查询，因为优化器等原因，结论不是100%正确</p>
+</blockquote>
+<p>(4)补救。尽量使用索引覆盖（using index）<br>(5)like尽量以“常量”开头，不要以”%”开头，否则用索引失效。如果必须使用”%”尽量使用索引覆盖。<br>(6)尽量不要使用or,否则索引失效。  </p>
+<hr>
+<p>#####其他优化方法：<br>(1)exist 和 in</p>
+<blockquote>
+<p>in:适用于主查询的数据集大。<br>exist：使用于子查询数据集大。</p>
+<blockquote>
+<p>exist:将主程序的结果，放到子查询结果中进行条件效验（是否有数据，如果有数据，校验成功，如果符合校验，则保留数据）</p>
+</blockquote>
+</blockquote>
+<p>(2)order by 优化：<br>using filesort:有两种算法：双路排序，单路排序。  </p>
+<blockquote>
+<p>双路排序:扫描两次磁盘（1：从磁盘读取排序字段,对排序字段进行排序 2.扫描其他字段）<br>单路排序：只读取一次(全部字段)，在buffer中进行排序(如果数据量太多，会拆分多次排序)<br>单路排序会比双路排序占用更多的buffer<br><code>set max_length_for_sort_data</code>设置buffer的最大字节。  </p>
+</blockquote>
+<p>提高order by 查询的策略：</p>
+<blockquote>
+<p>避免使用单路，双路；调整buffer的容量大小；<br>避免<code>select *。。。</code>尽量索引覆盖。<br>复合索引不用跨列使用，避免using filesort<br>保证全部的排序字段 排序的一致性（都是升序或降序）  </p>
+</blockquote>
+<hr>
+<p>####SQL排查</p>
+<p>慢查询日志：MySQL提供的一种日志记录，用于记录mysql中响应时间超过阀值的sql语句。(建议：开发调忧时打开，而最终部署时关闭)。   </p>
+<blockquote>
+<p>检查是否开启了慢查询日志：<code>show variables like &#39;%slow_query_log%&#39;;</code><br>临时开启：<code>set global slow_query_log=1；</code>重启mysql后会失效。<br>慢查询阀值：<code>show variables value like&#39;%long_query_time&#39;;</code><br>临时设置阀值：<code>set global       long_query_time=5;</code>需要重新登陆。<br>永久设置：在配置中添加<code>long_query_time=3</code><br>查询超过阀值的sql:<code>show global status like &#39;%show_queries%&#39;;</code>   </p>
+<blockquote>
+<p>(1)慢查询的sql被记录在日志中，因此可以通过日志查看具体的慢sql。<br>（2）通过mysqldumpslow 工具查看慢sql,可以通过一些过滤条件快速查找出需要定位的慢sql:<code>mysqldumpslow --help</code> </p>
+<blockquote>
+<p>s:排序方式<br>r:逆序<br>l:锁定时间<br>g:正则匹配模式   </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>语法:<code>mysqldumpslow 各种参数 慢查询日志文件</code>  </p>
+</blockquote>
+</blockquote>
+<hr>
+<p>####分析海量数据<br>(1)profiles</p>
+<blockquote>
+<p><code>show profiles;</code>:记录所有profiling打开后全部sql查询语句花费的时间，缺点:只能看到总共花费的时间。</p>
+<blockquote>
+<p>查看状态:<code>show variables like &#39;%profiling%&#39;</code><br>打开:<code>set profiling=on;</code></p>
+</blockquote>
+</blockquote>
+<p>(2)精确分析：sql诊断</p>
+<blockquote>
+<p><code>show profile all for query</code>查询上一步的query_id<br><code>show profile cpu,block id for query</code></p>
+</blockquote>
+<p>(3)全局查询日记:记录开启之后全部SQL语句。</p>
+<p>####锁机制：<br>解决因资源共享，而造成的并发问题。<br>分类：  </p>
+<ul>
+<li><p>操作类型：</p>
+<blockquote>
+<p>读锁(共享锁)：对同一数据，多个读操作可以同时进行，互不干扰<br>写锁(互斥锁)：如果当前写操作没有完毕，则无法进行其他的读操作、写操作。  </p>
+</blockquote>
+</li>
+<li><p>操作范围：</p>
+<blockquote>
+<p>表锁:一次性对一张表整体加锁。(开销小，加锁快；无死锁；但锁的范围大，容易发生锁冲突，并发度低)。<br>行锁：y一次性对一条数据加锁。(开销大，加锁慢，容易出现死锁，锁的范围小，不容易出现锁冲突，并发度高)<br>页锁：</p>
+</blockquote>
+</li>
+</ul>
+<p>查看加锁的表：<code>show open tables;</code><br>(1)加读锁：<br>加读锁：<code>lock table tablelock read</code><br>释放锁：<code>unlock tables；</code><br>会话:session :代表每个访问数据库的的用户。  </p>
+<blockquote>
+<p>会话0：对某个表加读锁。</p>
+<blockquote>
+<p>如果只给A表加读锁，则当前会话只能对A表进行读操作。 </p>
+</blockquote>
+<p>会话1(其他会话)： </p>
+<blockquote>
+<p>对于表A可读，对表A的插入删除操作，一直再等待，等到表被放开。<br>对其他表也可读可写。</p>
+</blockquote>
+</blockquote>
+<p><strong>会话0给A表加锁；其他会话的操作，可以对其他表进行操作，对A表，可读，写需要等到A表被释放锁。</strong></p>
+<p>(2)加写锁：<br>加写锁：<code>lock table tablelock write;</code></p>
+<blockquote>
+<p>会话0：</p>
+<blockquote>
+<p>当前会话，可以对加了写锁的表，进行任何操作；但是不能对其他表进行操作。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>其他会话：</p>
+<blockquote>
+<p>对会话0加锁的表，可以进行操作，但是要等到会话0释放写锁。</p>
+</blockquote>
+</blockquote>
+<p>分析表锁定：  </p>
+<blockquote>
+<p>查看加锁的表：<code>show open tables;</code><br>分析表锁定的严重程度：<code>show status like &#39;table%&#39;;</code>  </p>
+<blockquote>
+<p>Table_locks_immediate:即可能获取到的锁数。<br>Table_locks_waited:需要等待的表锁数(如果该值越大，说明存在的锁竞争越大)  </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>一般建议：Table_locks_immediate/Table_locks_waited&gt;5000,建议采用InnDB引擎。</p>
+</blockquote>
+<p>(2)行锁:</p>
+<blockquote>
+<p>需要暂时将自动commit关闭，set autocommit=0;以后需要通过commit<br>对行锁情况：</p>
+<blockquote>
+<p>1.如果会话X对某条数据a进行DML操作（研究时：关闭了自动commit的情况下），其他会话必须等待会话X结束事务后，才对数据a进行操作<br>2.表锁是通过<code>unlock tablesl</code>行锁是通过事务解锁。 </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>注意事项：</strong><br>如果没有是索引，则行锁会转化为表锁。<br>行锁的一种特殊情况：间隙锁:值在范围内，但却不存在。 </p>
+<blockquote>
+<p>间隙锁：Mysql会自动给 间隙 加锁–&gt;间隙锁。<br>行锁：如果有where，则实际加锁范围就是where后面的范围（不是实际范围）</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>行锁：<br>InnoDB默认采用行锁。</p>
+<blockquote>
+<p>缺点：比表锁性能损耗大。<br>优点：并发能力强，效率高。   </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>高并发用InnoDB,否则用MyISAM</strong></p>
+</blockquote>
+<p>行锁分析：<br><code>show status like &#39;%innodb_row_lock%&#39;;</code></p>
+<blockquote>
+<p>Innodb_row_lock_current_waits:当前正在等待锁的数量。<br>Innodb_row_lock_time:等待总时长。从系统开启到现在，一共等待的时间。<br>Innodb_row_lock_time_avg:平均等待时长。从系统开启到现在平均等待的时间。<br>Innodb_row_lock_time_max：最大等待时长，从系统启动到现在最大一次等待的时间。<br>Innodb_row_lock_waits:等待次数，从系统开启到现在一个等待的次数。  </p>
+</blockquote>
+<p>主从复制：<br>远程连接linux:数据库。  </p>
+<blockquote>
+<p><code>GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39; @&#39;%&#39; IDENTFIED BY &#39;root&#39; WITH  GRANT OPTION;</code><br><code>FLUSH PRIVILEGES;</code><br>如果仍然报错可能是防火墙没关闭：在 远程的上关闭防火墙</p>
+</blockquote>
+<p>原理：</p>
+<blockquote>
+<p>1.master 将改变的数记录在本地的二进制日志中（binary log）;该过程称之为二进制日志事件。<br>2.slave 将master的binary log 拷贝到自己的relayl log （中继日志文件）中<br>中继日志文件，将数据读取到自己的数据库之中   </p>
+</blockquote>
+<p><strong>Mysql主从复制是异步的，串行化的，有延迟。</strong><br>配置：<br>windows 主，Linux 从；<br>配置前</p>
+<blockquote>
+<p>先将权限（远程访问）和防火墙等处理。</p>
+<blockquote>
+<p>关闭Windows/Linux防火墙：Windows：右键“网络” ，Linux：service IP tables stop  </p>
+</blockquote>
+</blockquote>
+<p><strong>主机操作：(windows)</strong><br>my.ini文件</p>
+<blockquote>
+<p>[mysqld]  </p>
+</blockquote>
+<pre>
+#id
+server-id=1
+#二进制日志文件
+log-bin=".../mysql-bin"
+#错误记录文件
+log-error="..../mysql-error"
+#主从同步时，忽略的数据库
+binlog-ignore-db=数据库名
+#（可选）指定主从同步时，同步哪些数据库
+binlog-do-db=test
+</pre>
+<blockquote>
+<p>windows中的数据库，授权哪台计算机中的数据库是自己的从数据库：</p>
+<blockquote>
+<p><code>GRANT PEPLICATION slave,reload,super ON *.* TO &#39;root&#39; @&#39;192.168.2.%&#39; IDENTIFIED BY &#39;root&#39;;</code><br><code>flush privileges;</code>   </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>查看主数据库的状态（每次同步之前，需要观察主机状态的最新值）<code>show master status;</code></p>
+</blockquote>
+<p><strong>从机操作：(linux)</strong><br>my.cnf</p>
+<blockquote>
+<p>[mysqld] </p>
+</blockquote>
+<pre>
+service-id=2
+log-bin=..
+replication-do-db=...
+</pre>
+<p>开启同步：  </p>
+<blockquote>
+<p><code>start slave;</code><br>检查： <code>show slave status \G</code>   </p>
+<blockquote>
+<p>主要观察：Slave_IO_Running和Slave_SQL_Running,确保两者都为yes，如果不是查看报错的原因（如果是id值相同的错误，先停止：<code>stop slave;</code> 在修改：<code>set global server_id =2;</code> 再启动。）  </p>
+</blockquote>
+</blockquote>
 
       
     </div>
@@ -452,8 +827,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/12/12/适配器模式/" rel="prev" title="适配器模式">
-                适配器模式 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/08/你好，Hexo/" rel="prev" title="你好，Hexo">
+                你好，Hexo <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -530,7 +905,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -538,15 +913,6 @@
 
             
 
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
             
 
           </nav>
@@ -610,7 +976,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
