@@ -88,22 +88,4 @@
         <tag>设计模式</tag>
       </tags>
   </entry>
-  <entry>
-    <title><![CDATA[适配器模式]]></title>
-    <url>%2F2019%2F12%2F12%2F%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[适配器模式基本介绍 适配器模式将某个类的接口转换成客户端期望的另一个接口表示，]]></content>
-      <tags>
-        <tag>设计模式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[你好，Hexo]]></title>
-    <url>%2F2019%2F07%2F08%2F%E4%BD%A0%E5%A5%BD%EF%BC%8CHexo%2F</url>
-    <content type="text"><![CDATA[我的第一篇文章]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F07%2F08%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-  </entry>
 </search>
